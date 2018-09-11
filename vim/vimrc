@@ -1,1 +1,7 @@
-/home/eric/.vimrc
+"""""""""""
+" GENERAL "
+"""""""""""
+
+" Line numbering settings
+set number
+set relativenumber
