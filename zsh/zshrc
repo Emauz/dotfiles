@@ -17,18 +17,24 @@ compinit
 # ALIASES #
 ###########
 
+# shorten frequently used commands
 alias la='ls -A'
 alias ll='ls -lh'	# -h makes sizes human readable
 alias lla='ls -lAh'
 alias cl=clear
+
+# simple pingtest to cloudflare's dns server
 alias pingtest='ping 1.1.1.1'
 
+# aliases for easy modification to dotfiles
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
 alias i3config='vim ~/.config/i3/config && i3-msg reload && i3-msg restart'
 alias vimrc='vim ~/.vimrc'
 
-# enable "fuck" command
-eval $(thefuck --alias)
+# enable "fuck" command if installed
+if [ thefuck ]; then
+	eval $(thefuck --alias)
+fi
 
 # start tmux when running in terminal emulator
 if [ ! $TERM =~ screen ] && [ ! $TERM =~ linux ]; then
