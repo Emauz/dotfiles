@@ -172,8 +172,10 @@ gaps inner 8
 ########################
 
 bindsym $mod+Shift+f exec "firefox-nightly"
+bindsym $mod+Shift+p exec "firefox-nightly --private-window"
 bindsym $mod+Shift+t exec "thunderbird"
 bindsym $mod+Shift+w exec "i3-sensible-terminal weechat"
+bindsym $mod+Shift+s exec "spotify"
 
 #####################
 # Media key configs #
