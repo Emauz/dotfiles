@@ -176,6 +176,7 @@ bindsym $mod+Shift+p exec "firefox-nightly --private-window"
 bindsym $mod+Shift+t exec "thunderbird"
 bindsym $mod+Shift+w exec "i3-sensible-terminal weechat"
 bindsym $mod+Shift+s exec "spotify"
+bindsym $mod+Shift+o exec "libreoffice"
 
 #####################
 # Media key configs #
