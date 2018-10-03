@@ -35,8 +35,3 @@ alias vimrc='vim ~/.vimrc'
 if [ thefuck ]; then
 	eval $(thefuck --alias)
 fi
-
-# start tmux when running in terminal emulator
-if [ ! $TERM =~ screen ] && [ ! $TERM =~ linux ]; then
-	exec tmux
-fi
