@@ -1,3 +1,33 @@
+##################
+# i3-gaps config #
+##################
+
+gaps inner 8
+
+########################
+# Application launches #
+########################
+
+bindsym $mod+Shift+f exec "firefox-nightly"
+bindsym $mod+Shift+p exec "firefox-nightly --private-window"
+bindsym $mod+Shift+t exec "thunderbird"
+bindsym $mod+Shift+w exec "i3-sensible-terminal weechat"
+bindsym $mod+Shift+s exec "spotify"
+bindsym $mod+Shift+o exec "libreoffice"
+
+#####################
+# Media key configs #
+#####################
+
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #audio up
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #audio dn
+
+
+#########################
+# Auto-Generated Config #
+#########################
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -136,10 +166,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -160,28 +190,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-##################
-# i3-gaps config #
-##################
-
-gaps inner 8
-
-########################
-# Application launches #
-########################
-
-bindsym $mod+Shift+f exec "firefox-nightly"
-bindsym $mod+Shift+p exec "firefox-nightly --private-window"
-bindsym $mod+Shift+t exec "thunderbird"
-bindsym $mod+Shift+w exec "i3-sensible-terminal weechat"
-bindsym $mod+Shift+s exec "spotify"
-bindsym $mod+Shift+o exec "libreoffice"
-
-#####################
-# Media key configs #
-#####################
-
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #audio up
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #audio dn
