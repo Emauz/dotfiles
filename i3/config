@@ -12,16 +12,24 @@ bindsym $mod+Shift+f exec "firefox-nightly"
 bindsym $mod+Shift+p exec "firefox-nightly --private-window"
 bindsym $mod+Shift+t exec "thunderbird"
 bindsym $mod+Shift+w exec "i3-sensible-terminal weechat"
-bindsym $mod+Shift+s exec "spotify"
 bindsym $mod+Shift+o exec "libreoffice"
+bindsym $mod+Shift+c exec "clementine"
+bindsym $mod+Shift+s exec "spotify"
 
-#####################
-# Media key configs #
-#####################
+#################
+# Media configs #
+#################
 
+# Volume adjustment settings
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #audio up
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #audio dn
+
+# Play/pause settings
+bindsym $mod+Left exec "playerctl previous"
+bindsym $mod+Right exec "playerctl next"
+
+bindsym $mod+Down exec "playerctl play-pause"
 
 
 #########################
@@ -71,10 +79,11 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# OR alternatively, you can disable them
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -152,7 +161,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
