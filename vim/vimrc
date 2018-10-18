@@ -1,7 +1,9 @@
-"""""""""""
-" GENERAL "
-"""""""""""
+""""""""""
+" VISUAL "
+""""""""""
 
-" Line numbering settings
+" Line numbering
 set number
 set relativenumber
+" Syntax highlighting
+syntax on
