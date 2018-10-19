@@ -1,3 +1,17 @@
+" Vimrc
+" Eric Moss
+"
+
+"""""""""""""""
+" INDENTATION "
+"""""""""""""""
+" change tabs to instead be 4 spaces
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+
+
 """"""""""
 " VISUAL "
 """"""""""
