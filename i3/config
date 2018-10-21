@@ -35,7 +35,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #a
 bindsym $mod+Left exec  "playerctl previous"
 bindsym $mod+Right exec "playerctl next"
 bindsym $mod+Down exec  "playerctl play-pause"
-bindsym $mod+Up exec    "echo $(playerctl metadata title) >> ~/Text/todo/2hutunes"
 
 
 #########################
