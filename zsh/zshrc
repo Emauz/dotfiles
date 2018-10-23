@@ -28,6 +28,7 @@ alias pingtest='ping 1.1.1.1'
 
 # aliases for easy modification to dotfiles
 alias zshrc='vim ~/.zshrc && source ~/.zshrc'
+alias zshenv='vim ~/.zshenv && source ~/.zshenv'
 alias i3config='vim ~/.config/i3/config && i3-msg reload && i3-msg restart'
 alias vimrc='vim ~/.vimrc'
 

@@ -15,16 +15,16 @@ gaps inner 8
 ########################
 
 # desktop applications
-bindsym $mod+Shift+f            exec "$BROWSER"
-bindsym $mod+Shift+p            exec "$BROWSER --private-window"
-bindsym $mod+Shift+t            exec "thunderbird"
-bindsym $mod+Shift+w            exec "i3-sensible-terminal weechat"
-bindsym $mod+Shift+o            exec "libreoffice"
-bindsym $mod+Shift+c            exec "clementine"
-bindsym $mod+Shift+s            exec "spotify"
+bindsym $mod+Shift+f            exec $BROWSER 
+bindsym $mod+Shift+p            exec $BROWSER --private-window
+bindsym $mod+Shift+t            exec thunderbird
+bindsym $mod+Shift+w            exec i3-sensible-terminal weechat
+bindsym $mod+Shift+o            exec libreoffice
+bindsym $mod+Shift+c            exec clementine
+bindsym $mod+Shift+s            exec spotify
 
 # i3lock
-bindsym $mod+z                  exec "i3lock"
+bindsym $mod+z                  exec i3lock
 
 #################
 # Function Keys #
@@ -61,9 +61,9 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
 #################
 
 # Play/pause settings
-bindsym $mod+Left               exec "playerctl previous"
-bindsym $mod+Right              exec "playerctl next"
-bindsym $mod+Down               exec "playerctl play-pause"
+bindsym $mod+Left               exec playerctl previous
+bindsym $mod+Right              exec playerctl next
+bindsym $mod+Down               exec playerctl play-pause
 
 
 #########################
