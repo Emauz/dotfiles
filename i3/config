@@ -15,8 +15,8 @@ gaps inner 8
 ########################
 
 # desktop applications
-bindsym $mod+Shift+f            exec $BROWSER 
-bindsym $mod+Shift+p            exec $BROWSER --private-window
+bindsym $mod+Shift+f            exec firefox-developer-edition 
+bindsym $mod+Shift+p            exec firefox-developer-edition --private-window
 bindsym $mod+Shift+t            exec thunderbird
 bindsym $mod+Shift+w            exec i3-sensible-terminal weechat
 bindsym $mod+Shift+o            exec libreoffice
@@ -49,7 +49,7 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
 #bindsym XF86AudioMicMute
 #bindsym XF86MonBrightnessDown
 #bindsym XF86MonBrightnessUp
-#bindsym XF86Display
+bindsym XF86Display             exec arandr
 #bindsym XF86WLAN
 #bindsym XF86Tools
 #bindsym XF86Search
@@ -64,6 +64,19 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym $mod+Left               exec playerctl previous
 bindsym $mod+Right              exec playerctl next
 bindsym $mod+Down               exec playerctl play-pause
+
+####################
+# Dropdown configs #
+####################
+
+# general purpose tmux dropdown
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 600 400
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 5
+exec --no-startup-id i3-sensible-terminal -n dropdown -e tmux
+
+bindsym $mod+a                  [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
 
 #########################
@@ -152,7 +165,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
