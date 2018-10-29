@@ -8,7 +8,7 @@ bindsym $mod+u       resize shrink height 6 px or 6 ppt
 bindsym $mod+i       resize grow height 6 px or 6 ppt
 bindsym $mod+o       resize shrink width 6 px or 6 ppt
 
-gaps inner 8
+gaps inner 10
 
 ########################
 # Application launches #
@@ -24,7 +24,7 @@ bindsym $mod+Shift+c            exec clementine
 bindsym $mod+Shift+s            exec spotify
 
 # i3lock
-bindsym $mod+z                  exec i3lock
+bindsym $mod+BackSpace          exec i3lock
 
 #################
 # Function Keys #
@@ -43,9 +43,9 @@ bindsym $mod+z                  exec i3lock
 #bindsym F11
 #bindsym F12
 
-bindsym XF86AudioMute           exec --no-startup-id amixer sset -c 1 Master toggle
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer sset -c 1 Master 5%+
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer sset -c 1 Master 5%-
+bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5% 
 #bindsym XF86AudioMicMute
 #bindsym XF86MonBrightnessDown
 #bindsym XF86MonBrightnessUp
@@ -78,6 +78,11 @@ exec --no-startup-id i3-sensible-terminal -n dropdown -e tmux
 
 bindsym $mod+a                  [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
+#########
+# Memes #
+#########
+
+bindsym $mod+c                  exec xdotool click --repeat 1000 --delay 1 1
 
 #########################
 # Auto-Generated Config #
