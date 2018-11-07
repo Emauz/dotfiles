@@ -1,1 +1,2 @@
 export BROWSER="/bin/firefox-developer-edition"
+source /etc/profile
