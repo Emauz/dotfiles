@@ -17,6 +17,7 @@ gaps inner 10
 # desktop applications
 bindsym $mod+Shift+f            exec firefox-developer-edition 
 bindsym $mod+Shift+p            exec firefox-developer-edition --private-window
+bindsym $mod+Shift+b            exec qutebrowser
 bindsym $mod+Shift+m            exec thunderbird
 bindsym $mod+Shift+w            exec i3-sensible-terminal weechat
 bindsym $mod+Shift+o            exec libreoffice
@@ -75,7 +76,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 5
-exec --no-startup-id i3-sensible-terminal -n dropdown -e tmux
+exec --no-startup-id i3-sensible-terminal -n dropdown
 
 bindsym $mod+a                  [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
