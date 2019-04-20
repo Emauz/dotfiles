@@ -15,15 +15,22 @@ gaps inner 10
 ########################
 
 # desktop applications
-bindsym $mod+Shift+f            exec firefox-developer-edition 
-bindsym $mod+Shift+p            exec firefox-developer-edition --private-window
+bindsym $mod+Shift+f            exec firefox-developer-edition
+bindsym $mod+Shift+p            exec pycharm.sh
+bindsym $mod+p                  exec firefox-developer-edition --private-window
 bindsym $mod+Shift+b            exec qutebrowser
 bindsym $mod+Shift+m            exec thunderbird
 bindsym $mod+Shift+w            exec i3-sensible-terminal weechat
 bindsym $mod+Shift+o            exec libreoffice
-bindsym $mod+Shift+c            exec clementine
+bindsym $mod+Shift+c            exec clion.sh
 bindsym $mod+Shift+s            exec spotify
-bindsym $mod+Shift+t            exec openttd
+bindsym $mod+Shift+t            exec cool-retro-term
+bindsym $mod+Shift+i            exec idea.sh
+bindsym $mod+Shift+g            exec goland.sh
+
+# background scripts
+
+bindsym $mod+ctrl+s              exec scrot
 
 # i3lock
 bindsym $mod+BackSpace          exec i3lock

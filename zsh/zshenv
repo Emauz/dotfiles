@@ -1,3 +1,28 @@
 export BROWSER="firefox-developer-edition"
 export TERMINAL="st"
+export FOO="foo"
 source /etc/profile
+
+# Append our default paths
+appendpath () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
+
+appendpath '/usr/local/sbin'
+appendpath '/usr/local/bin'
+appendpath '/usr/bin'
+appendpath '/home/eric/.local/bin'
+appendpath '/home/eric/.gem/ruby/2.5.0/bin'
+appendpath '/opt/idea-IU-183.5153.38/bin'
+appendpath '/opt/clion-2018.3.4/bin'
+appendpath '/opt/openresty/bin'
+appendpath '/opt/pycharm-2019.1/bin'
+appendpath '/opt/goland/bin'
+unset appendpath
+
+export PATH

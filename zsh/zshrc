@@ -2,7 +2,7 @@
 # Visual configs #
 ##################
 
-PS1="\[\u] "
+PS1=$'%/\n> '
 
 ###########
 # ALIASES #
@@ -29,7 +29,6 @@ if [ thefuck ]; then
 	eval $(thefuck --alias)
 fi
 
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -44,3 +43,5 @@ zstyle :compinstall filename '/home/eric/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+export GOOGLE_APPLICATION_CREDENTIALS="/home/eric/Text/auth/TrainTrack.json"
