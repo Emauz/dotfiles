@@ -3,6 +3,9 @@ export TERMINAL="st"
 export FOO="foo"
 source /etc/profile
 
+# setup other paths
+export GOPATH='/home/eric/.go/'
+
 # Append our default paths
 appendpath () {
     case ":$PATH:" in
