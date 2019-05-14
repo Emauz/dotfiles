@@ -27,6 +27,7 @@ bindsym $mod+Shift+s            exec spotify
 bindsym $mod+Shift+t            exec cool-retro-term
 bindsym $mod+Shift+i            exec idea.sh
 bindsym $mod+Shift+g            exec goland.sh
+bindsym $mod+Shift+v            exec virtualbox
 
 # background scripts
 
